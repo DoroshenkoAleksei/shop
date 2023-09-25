@@ -38,64 +38,7 @@ export default function Order() {
     <br />
     {/* How to place an order BLOCK
      */}
-    <div style={{ position: "absolute", top: 0, right: 0, marginRight: "2cm" }}>
-      <div style={{ display: "flex", flexDirection: "column", marginTop: 1500 }}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={48}
-          height={48}
-          viewBox="0 0 48 48"
-          fill="none"
-        >
-          {/* Код иконки первого виджета */}
-        </svg>
-        {/* Заголовок и описание */}
-        <div
-          style={{
-            marginLeft: "1em",
-            color: "var(--Black, #000)" /* text 16 medium */,
-            fontFamily: "Poppins",
-            fontSize: 16,
-            fontStyle: "normal",
-            fontWeight: 500,
-            lineHeight: "normal"
-          }}
-        >
-          <h3 style={{ marginTop: 100 }}>How to place an order</h3>
-        </div>
-      </div>
-      {/* Другие блоки с виджетами и заголовками аналогично первому */}
-      {/* Пример второго блока */}
-      <div>
-        {/* Иконка виджета (замените на вашу иконку) */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={48}
-          height={48}
-          viewBox="0 0 48 48"
-          fill="none"
-        >
-          {/* Код иконки второго виджета */}
-        </svg>
-        {/* Заголовок и описание */}
-        <div style={{ marginLeft: "1em" }}>
-          <h1
-            style={{
-              color: "var(--Pink-main, #FF406E)" /* headlines 48 semiBold */,
-              fontFamily: "Poppins",
-              fontSize: 48,
-              fontStyle: "normal",
-              fontWeight: 600,
-              lineHeight: "normal"
-            }}
-          >
-            Order process
-          </h1>
-        </div>
-      </div>
-    </div>
     <div style={{ display: "flex", alignItems: "center", marginBottom: "1em" }}>
-      {/* Иконка виджета (замените на вашу иконку) */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={48}
@@ -110,7 +53,6 @@ export default function Order() {
           fill="#FF406E"
         />
       </svg>
-      {/* Заголовок и описание */}
       <div style={{ marginLeft: "1em"}}>
         <h3>Place your order</h3>
         <p>Place your order through our website</p>
@@ -120,7 +62,6 @@ export default function Order() {
       style={{ width: 2, height: 72, backgroundColor: "#FF406E", marginLeft: 25 }}
     />
     <div style={{ display: "flex", alignItems: "center", marginBottom: "1em" }}>
-      {/* Иконка виджета (замените на вашу иконку) */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={48}
@@ -135,7 +76,6 @@ export default function Order() {
           fill="#FF406E"
         />
       </svg>
-      {/* Заголовок и описание */}
       <div style={{ marginLeft: "1em" }}>
         <h3>Wait for the order confirmation </h3>
         <p>
@@ -148,7 +88,6 @@ export default function Order() {
       style={{ width: 2, height: 72, backgroundColor: "#FF406E", marginLeft: 25 }}
     />
     <div style={{ display: "flex", alignItems: "center", marginBottom: "1em" }}>
-      {/* Иконка виджета (замените на вашу иконку) */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={48}
@@ -163,7 +102,6 @@ export default function Order() {
           fill="#FF406E"
         />
       </svg>
-      {/* Заголовок и описание */}
       <div style={{ marginLeft: "1em" }}>
         <h3>Pay for the order and shipping</h3>
         <p>

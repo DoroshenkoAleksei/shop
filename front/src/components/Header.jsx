@@ -141,7 +141,7 @@ export default function Header() {
           >
             Subscribe
           </button>
-          <div
+          {/* <div
             style={{
               display: "flex",
               flexDirection: "column",
@@ -193,7 +193,7 @@ export default function Header() {
             >
               Forise
             </button>
-          </div>
+          </div> */}
         </div>
       </>
     </header>
