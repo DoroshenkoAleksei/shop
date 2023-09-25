@@ -1,0 +1,409 @@
+{% extends "./base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}name{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="{% static 'core/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'basket/css/basket.css' %}">
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        p {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Name</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'store:about' %}">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'store:delivery' %}">Delivery</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'store:reviews' %}">Reviews</a>
+                        </li>
+                      
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    
+                    
+                    
+                    
+      <a type="button" role="button" href="{% url "basket:basket_summary" %}" class="btn btn-outline-secondary">
+    <div class="d-flex align-items-center">
+        <div class="badge bg-danger rounded-circle me-1">
+            {% with total_qty=basket|length %}
+                {% if total_qty > 0 %}
+                    {{ total_qty }}
+                {% else %}
+                    0
+                {% endif %}
+            {% endwith %}
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                            class="bi bi-cart3" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+    </div>
+    Basket
+</a>
+
+
+
+                
+                
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="content">{% block content %}
+        <h1 style="color: #FF406E;
+
+/* headlines 48 semi-bold */
+font-family: Poppins;
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-left: 100px;
+margin-top: 50px;
+">About us</h1>
+<h3 style="/* text 16 medium */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+color: #000;
+margin-left: 800px;
+margin-top: -50px;">Интернет магазин COLLEKTIONBEAUTY предлагает оригинальную <br>косметику от Soskin (Париж, Франция), 
+    SkinClinic (Испания), <br>ECLADO(Корея), RENOPHASE (Франция),<br>
+    M.A.D.(США).
+    Приобретая у нас косметику брендов Soskin, SkinClinic. ECLADO,<br> RENOPHASE, M.A.D. , 
+    Вы можете быть уверенны в эффективности и <br>безопасности ее применения. Наш интернет магазин гарантирует<br>
+     отсутствие подделок и просроченных продуктов, т.к. напрямую работает с <br>Дистрибьюторами Soskin, 
+     SkinClinic, ECLADO, RENOPHASE, M.A.D. <br>в России.</h3><br>
+<div>
+    <img src="/media/images/About.jpg" alt="about" style="margin-left: 100px; width: 1212px;
+    height: 700px;">
+
+</div><br>
+<h1 style="font-family: Poppins;
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+color: #FF406E;
+margin-left: 100px;
+
+">Soskin</h1>
+<h3 style="/* text 16 medium */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+color: #000;
+margin-left: 800px;
+margin-top: -50px;">Космецевтика Soskin - это безопасная экологически-чистая натуральная<br>
+ косметика, созданная с применением самых современных достижений <br>
+ в косметологии и медицине. Натуральная французская космецевтика. <br>
+ Премиальный бренд, предлагающий полный спектр портфолио для <br>
+ дерматологов, врачей-эстетистов и косметологов.</h3>
+<br>
+ <h1 style="font-family: Poppins;
+ font-family: Poppins;
+ font-size: 48px;
+ font-style: normal;
+ font-weight: 600;
+ line-height: normal;
+color: #FF406E;
+margin-left: 100px;
+
+">SkinClinic</h1>
+<h3 style="/* text 16 medium */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+color: #000;
+margin-left: 800px;
+margin-top: -50px;">Косметика SkinClinic - это испанская косметика которая улучшает ваш<br>
+ имидж и качество вашей жизни, предлагая медицинские и косметические <br>
+ решения для красоты, старения и многих других проблем с кожей.<br>
+  Объединяя исследования и повседневную медицинскую практику, SkinClinic<br>
+   производит дермокосметику, которая доказала свою эффективность и <br>
+   простоту использования как часть повседневного ухода за кожей.<br>
+ECLADO – известный корейский бренд профессиональной косметики с <br>
+20-летней историей успеха, в основе которого лежит философия <br>«здоровой красоты».</h3>
+
+<br>
+ <h1 style="font-family: Poppins;
+ font-family: Poppins;
+ font-size: 48px;
+ font-style: normal;
+ font-weight: 600;
+ line-height: normal;
+color: #FF406E;
+margin-left: 100px;
+
+">Eclado</h1>
+<img src="/media/images/Rectangle_32.png" alt="some" style="margin-left: 100px; margin-top: 50px;">
+
+<h3 style="/* text 16 medium */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+color: #000;
+margin-left: 800px;
+margin-top: -50px;">
+Профессиональная косметика ECLADO – это продукция премиального <br>
+качества, которая представляет собой уникальный синтез высоких <br>
+технологий, традиционных ценных компонентов и современного подхода к <br>
+производству.
+Вся продукция ECLADO безопасна, гипоаллергенна, действует очень <br>
+деликатно, отличается доказанной эффективностью и обеспечивает <br>
+длительный устойчивый результат. Высокая концентрация растительных <br>
+экстрактов, пептидов, аминокислот, гиалуроновой кислоты в составе <br>
+косметики позволяют почувствовать wow-эффект уже после первого<br>
+ применения! В портфеле ECLADO - 8 основных косметических линий.<br>
+  Широкий ассортимент продуктов - более 120 наименований - позволяет <br>
+  предложить клиентам эстетические программы, решающие разнообразные <br>
+  задачи и подходящие для кожи любого возраста, типа и состояния.</h3>
+
+<br><br><br>
+  <h3 style="/* text 16 medium */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #000;
+  margin-left: 100px;
+  margin-top: -10px;">
+  RENOPHASE® - международная группа, представленная научно-<br>
+  исследовательскими лабораториями и производственными базами во <br>
+  Франции, Швейцарии и Канаде, где разрабатываются новые и <br>
+  совершенствуются испытанные технологии. На базе современных <br>
+  представлений о физиологии процессов старения, механизмов действия <br>
+  anti-age- компонентов, накопленного многолетнего практического опыта <br>
+  создаются высокоэффективные методики омоложения с разработкой <br>
+  инновационных комплексов, защищенных международными патентами.<br>
+   Инновационные формулы отвечают самым взыскательным требованиям пациентов.</h3>
+  
+   <h1 style="font-family: Poppins;
+   font-family: Poppins;
+   font-size: 48px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+  color: #FF406E;
+  margin-left: 1000px;
+  margin-top: -180px;
+  
+  ">Renophase</h1>
+  <br><br><br>
+
+<h3 style="/* text 16 medium */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  color: #000;
+  margin-left: 100px;
+  margin-top: 200px;">
+  Американский бренд M.A.D. Skincare создал уникальную косметику, которая<br>
+   предназначается для решения дерматологических проблем и домашнего <br>
+   ухода за кожей лица. Ее отличают совершенные формулы и высокое <br>
+   качество, так как все продукты тщательно контролируются на каждом этапе<br>
+    производства.
+  M.A.D. Skincare представляет серии косметики, действие которых <br>
+  направлено на омоложение, осветление, восстановление, выравнивание и <br>
+  очищение кожного покрова. В своем составе ухаживающие средства<br>
+   содержат целый комплекс полезных веществ. Американская косметика дает<br>
+    быстрый результат и гарантирует накопительный эффект.</h3>
+
+    <h1 style="font-family: Poppins;
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+   color: #FF406E;
+   margin-left: 700px;
+   margin-top: -170px;
+   
+   ">M.A.D</h1>
+   <img src="/media/images/Rectangle_36.png" alt="some" style="margin-left: 900px;">
+  <br><br><br>
+   <h1 style="font-family: Poppins;
+ font-family: Poppins;
+ font-size: 48px;
+ font-style: normal;
+ font-weight: 600;
+ line-height: normal;
+color: #FF406E;
+margin-left: 100px;
+margin-top: 80px;
+
+">Genosys</h1>
+<h3 style="/* text 16 medium */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+color: #000;
+margin-left: 800px;
+margin-top: -50px;">geneus description TRATATRATATRATATRATAT<br>RATATRATATRATATRATATRATATRATATRATATRATATRATATRATATRATA</h3>
+<br>
+<br><br><br>
+<h3 style="/* text 16 medium */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+color: #000;
+margin-left: 100px;
+margin-top: -10px;">
+Some description for Forise</h3>
+
+ 
+<h1 style="font-family: Poppins;
+font-family: Poppins;
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+color: #FF406E;
+margin-left: 1000px;
+margin-top: -20px;
+
+">Forise</h1>
+
+
+
+
+
+        {% endblock %}</div>
+    
+</body>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} FOOTER {% endcomment %}
+    <footer class="container py-5 footer">
+        <hr>
+        <div class="row pt-4">
+            <div class="col-12 col-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-asterisk" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z" />
+                </svg>
+                <small class="d-block mb-3 text-muted">&copy; 2017-2021</small>
+            </div>
+            <div class="col-6 col-md fs15">
+                <h5>Features</h5>
+                <ul class="list-unstyled">
+                    <li><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md fs15">
+                <h5>Resources</h5>
+                <ul class="list-unstyled">
+                    <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md fs15">
+                <h5>Resources</h5>
+                <ul class="list-unstyled">
+                    <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled">
+                    <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

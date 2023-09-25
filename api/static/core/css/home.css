@@ -1,0 +1,64 @@
+/* Стили для кнопок */
+.btn-custom {
+    color: white; /* Белый цвет текста */
+    background-color: blue; /* Синий фон */
+    border: none; /* Убираем границу */
+    transition: background-color 0.3s, color 0.3s; /* Плавное изменение цвета при наведении */
+  }
+  
+  /* Стили для изменения цвета при наведении */
+  .btn-custom:hover {
+    background-color: pink; /* Розовый фон при наведении */
+    color: white; /* Белый цвет текста при наведении */
+  }
+  .skin-care-title {
+    position: absolute;
+    top: 5.5cm; /* Переместить заголовок на 5 см ниже */
+    left: 1.5cm;
+    z-index: 3;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2; /* Межстрочное расстояние для двух строк */
+  }
+  .btn-custom2 {
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease; /* Добавляем плавный переход для цвета фона */
+  }
+
+  .btn-custom2:hover {
+    background-color: pink; /* Изменяем цвет фона при наведении на кнопку */
+  }
+  .btn-custom {
+    width: 50%; /* Это заставит кнопки растянуться на всю ширину контейнера */
+    background-color: #FF406E; /* Замените на желаемый цвет фона */
+    margin-bottom: 10px; /* Добавим немного отступа между кнопками */
+  }
+  
+  .headline {
+    width: 144px;
+    height: 36px;
+    color: #171717;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 10px; /* Добавим немного отступа между заголовками */
+}
+
+  .btn-custom2 {
+    width: 144px;
+    height: 36px;
+    color: #171717;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+.wrapper {
+  padding: 0 20px;
+}

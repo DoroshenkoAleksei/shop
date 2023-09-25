@@ -1,0 +1,362 @@
+{% extends "./base.html" %}
+
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class = "wrapper">
+<main>
+  
+  <div class="container ">
+   
+      <link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+    </div>
+    <br>
+    <div class="position-relative">
+      <img src="media/images/Front_2.jpg" alt="Front2"
+           style="width: 408px;
+           height: 571px;
+           flex-shrink: 0;
+           margin-left: 20mm;
+           ">
+      <img src="media/images/Front_3.jpg" alt="Front"
+           style="width: 380px;
+           height: 571px;
+           margin-left: 1mm;">
+           
+           <button class="Subscribe" style="position: absolute; top: 9cm; right: 2.5cm; background-color: #FF406E; color: white; border: none; padding: 10px 75px; font-size: 30px; border-radius: 10px; border-radius: 20px;">
+            Subscribe
+          </button>
+          
+          
+        
+          <div style="display: flex; flex-direction: column; align-items: flex-end; position: absolute; top: 0cm; right: 5cm; ">
+            <button class="btn btn-custom2" style="width: 100%; text-align: left;">Soskin</button>
+            <button class="btn btn-custom2" style="width: 100%; text-align: left;">SkinClinic</button>
+            <button class="btn btn-custom2" style="width: 100%; text-align: left;">Eclado</button>
+            <button class="btn btn-custom2" style="width: 100%; text-align: left;">Renophase</button>
+            <button class="btn btn-custom2" style="width: 100%; text-align: left;">M.A.D.</button>
+            <button class="btn btn-custom2" style="width: 100%; text-align: left;">Genosys</button>
+            <button class="btn btn-custom2" style="width: 100%; text-align: left;">Forise</button>
+          </div>
+          
+    </div>
+    
+    
+    <br>
+    <style>
+      .wrapper {
+        padding:  20px;
+      }
+      .btn-custom2 {
+        width: 100%;
+        text-align: left;
+        transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+      }
+    
+      /* Изменение цвета фона при наведении на кнопки */
+      .btn-custom2:hover {
+        color: #FF406E
+      }
+      .btn-custom {
+        width: 50%; /* Это заставит кнопки растянуться на всю ширину контейнера */
+        margin-bottom: 10px; /* Добавим немного отступа между кнопками */
+      }
+      
+      .headline {
+        width: 144px;
+        height: 36px;
+        color: #171717;
+        font-family: 'Poppins', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 10px; /* Добавим немного отступа между заголовками */
+    }
+   
+      .btn-custom2 {
+        width: 144px;
+        height: 36px;
+        color: #171717;
+        font-family: 'Poppins', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh; /* Это обеспечит вертикальное центрирование по высоте страницы */
+        padding: 20px;
+    }
+    
+    .submit-button {
+      width: 400px;
+      height: 56px;
+      padding: 16px;
+      text-align: center;
+      border: none;
+      border-radius: 30px;
+      background: var(--Pink-main, #FF406E);
+      color: white;
+      cursor: pointer;
+  }
+</style>
+   
+    
+    <br>
+
+
+   <div style="display: flex; align-items: center; margin-bottom: 5cm;">
+  <!-- Блок "About us" -->
+  <div style="flex: 1;">
+    <h1 style="color: #FF406E; font-family: Poppins; font-size: 48px; font-weight: 600; margin-left: 75px; margin-top: -250px;">About us</h1>
+    <p style="margin-left: 75px; margin-bottom: 2cm;">Интернет магазин COLLEKTIONBEAUTY предлагает оригинальную косметику <br>от Soskin (Париж, Франция), SkinClinic (Испания), ECLADO(Корея),<br> RENOPHASE (Франция), M.A.D.(США).</p>
+  </div>
+  <div>
+    <img src="media/images/Front_about.jpg" alt="Front_about" style="height: 701px; width: 500px; margin-right: 50px; ">
+  </div>
+</div>
+
+    
+    <!-- Четыре заголовка с описаниями, по два в строку -->
+    <div style="display: flex; flex-direction: column; margin-top: -11cm; padding: 20px; margin-top: -550px;">
+      <!-- Первая строка из двух блоков заголовка и описания -->
+      <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <!-- Первый блок заголовка и описания -->
+        <div style="flex: 1; margin-right: 10px;">
+          <h1 style="color: #FF406E; font-family: Poppins; font-size: 48px; font-weight: 600; margin-left: 75px;">7 brands</h1>
+          <p style="margin-left: 75px;">From different countries</p>
+        </div>
+    
+        <!-- Второй блок заголовка и описания -->
+        <div style="flex: 1;">
+          <h1 style="color: #FF406E; font-family: Poppins; font-size: 48px; font-weight: 600; margin-left: -200px;">Pay later</h1>
+          <p style="margin-left: -200px;">Prepayment only, pay the rest when <br>delivered!</p>
+        </div>
+      </div>
+    
+      <!-- Вторая строка из двух блоков заголовка и описания -->
+      <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <!-- Третий блок заголовка и описания -->
+        <div style="flex: 1; margin-right: 10px;">
+          <h1 style="color: #FF406E; font-family: Poppins; font-size: 48px; font-weight: 600; margin-left: 75px;">150+</h1>
+          <p style="margin-left: 75px;">Products for different skin types</p>
+        </div>
+    
+        <!-- Четвертый блок заголовка и описания -->
+        <div style="flex: 1;">
+          <h1 style="color: #FF406E; font-family: Poppins; font-size: 48px; font-weight: 600; margin-left: -200px;">Premium</h1>
+          <p style="margin-left: -200px;">Quality and best prices</p>
+        </div>
+      </div>
+    <!-- Кнопка "About" -->
+    <div style="display: flex; justify-content: left; margin-top: 20px; margin-left: 75px">
+      <a class="nav-link" href="{% url 'store:about' %}" style="background-color: white; color: #FF406E; border: 2px solid #FF406E; padding: 10px 40px; border-radius: 20px;">
+        Read more
+      </a>
+    </div>
+    
+</div>
+    
+    
+    
+    
+    
+    
+
+
+    <hr>
+    <h1 class=header>Our products</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3 ">
+      {% for product in products %}
+      <div class="col">
+        <div class="card border-0">
+          <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}">
+          <div class="card-body px-0">
+            <p class="card-text">
+              <a class="text-dark text-decoration-none"
+                href="{{ product.get_absolute_url }}">{{ product.title|slice:":50" }}...</a>
+            </p>
+            <div class="fw-bold">${{product.price}}</div>
+          </div>
+        </div>
+      </div>
+      
+      {% endfor %}
+    </div>
+    <br>
+    <br>
+  </div>
+
+  <!-- How to place an order BLOCK
+-->
+  <div style="position: absolute; top: 0; right: 0; margin-right: 2cm;">
+    <div style="display: flex; flex-direction: column; margin-top: 1950px">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+      <!-- Код иконки первого виджета -->
+    </svg>
+    <!-- Заголовок и описание -->
+    <div style="margin-left: 1em; color: var(--Black, #000);
+
+    /* text 16 medium */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;">
+      <h3 style=" margin-top: 100px;">How to place an order</h3>
+    </div>
+  </div>
+
+  <!-- Другие блоки с виджетами и заголовками аналогично первому -->
+  <!-- Пример второго блока -->
+  <div >
+    <!-- Иконка виджета (замените на вашу иконку) -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+      <!-- Код иконки второго виджета -->
+    </svg>
+    <!-- Заголовок и описание -->
+    <div style="margin-left: 1em;">
+      <h1 style= "color: var(--Pink-main, #FF406E);
+      /* headlines 48 semi-bold */
+      font-family: Poppins;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;">Order process</h1>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="display: flex; align-items: center; margin-bottom: 1em;">
+  <!-- Иконка виджета (замените на вашу иконку) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M41.46 14.24L41.18 13.74C40.8188 13.1354 40.3094 12.6329 39.7 12.28L26.28 4.54C25.6724 4.1875 24.9826 4.00124 24.28 4H23.7C22.9974 4.00124 22.3076 4.1875 21.7 4.54L8.28 12.3C7.67394 12.6505 7.17052 13.1539 6.82 13.76L6.54 14.26C6.1875 14.8677 6.00124 15.5575 6 16.26V31.76C6.00124 32.4626 6.1875 33.1524 6.54 33.76L6.82 34.26C7.17958 34.859 7.68098 35.3604 8.28 35.72L21.72 43.46C22.3246 43.8198 23.0164 44.0066 23.72 44H24.28C24.9826 43.9988 25.6724 43.8126 26.28 43.46L39.7 35.7C40.312 35.3574 40.8174 34.852 41.16 34.24L41.46 33.74C41.8082 33.1306 41.9942 32.442 42 31.74V16.24C41.9988 15.5375 41.8126 14.8477 41.46 14.24ZM23.7 8H24.28L36 14.76L24 21.68L12 14.76L23.7 8ZM26 39L37.7 32.24L38 31.74V18.22L26 25.16V39Z" fill="#FF406E"/>
+      </svg>
+      <!-- Заголовок и описание -->
+      <div style="margin-left: 1em;">
+        <h3>Place your order</h3>
+        <p>Place your order through our website</p>
+      </div>
+    </div>
+    <div style="width: 2px;
+    height: 72px; background-color: #FF406E; margin-left: 25px"></div>
+<div style="display: flex; align-items: center; margin-bottom: 1em;">
+  <!-- Иконка виджета (замените на вашу иконку) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M41.46 14.24L41.18 13.74C40.8188 13.1354 40.3094 12.6329 39.7 12.28L26.28 4.54C25.6724 4.1875 24.9826 4.00124 24.28 4H23.7C22.9974 4.00124 22.3076 4.1875 21.7 4.54L8.28 12.3C7.67394 12.6505 7.17052 13.1539 6.82 13.76L6.54 14.26C6.1875 14.8677 6.00124 15.5575 6 16.26V31.76C6.00124 32.4626 6.1875 33.1524 6.54 33.76L6.82 34.26C7.17958 34.859 7.68098 35.3604 8.28 35.72L21.72 43.46C22.3246 43.8198 23.0164 44.0066 23.72 44H24.28C24.9826 43.9988 25.6724 43.8126 26.28 43.46L39.7 35.7C40.312 35.3574 40.8174 34.852 41.16 34.24L41.46 33.74C41.8082 33.1306 41.9942 32.442 42 31.74V16.24C41.9988 15.5375 41.8126 14.8477 41.46 14.24ZM23.7 8H24.28L36 14.76L24 21.68L12 14.76L23.7 8ZM26 39L37.7 32.24L38 31.74V18.22L26 25.16V39Z" fill="#FF406E"/>
+      </svg>
+      <!-- Заголовок и описание -->
+      <div style="margin-left: 1em;">
+        <h3>Wait for the order confirmation </h3>
+        <p>Wait for our agent to contact you to confirm order details<br> and final costs of the package</p>
+      </div>
+    </div>
+    <div style="width: 2px;
+    height: 72px; background-color: #FF406E; margin-left: 25px"></div>
+</div>
+    <div style="display: flex; align-items: center; margin-bottom: 1em;">
+      <!-- Иконка виджета (замените на вашу иконку) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M41.46 14.24L41.18 13.74C40.8188 13.1354 40.3094 12.6329 39.7 12.28L26.28 4.54C25.6724 4.1875 24.9826 4.00124 24.28 4H23.7C22.9974 4.00124 22.3076 4.1875 21.7 4.54L8.28 12.3C7.67394 12.6505 7.17052 13.1539 6.82 13.76L6.54 14.26C6.1875 14.8677 6.00124 15.5575 6 16.26V31.76C6.00124 32.4626 6.1875 33.1524 6.54 33.76L6.82 34.26C7.17958 34.859 7.68098 35.3604 8.28 35.72L21.72 43.46C22.3246 43.8198 23.0164 44.0066 23.72 44H24.28C24.9826 43.9988 25.6724 43.8126 26.28 43.46L39.7 35.7C40.312 35.3574 40.8174 34.852 41.16 34.24L41.46 33.74C41.8082 33.1306 41.9942 32.442 42 31.74V16.24C41.9988 15.5375 41.8126 14.8477 41.46 14.24ZM23.7 8H24.28L36 14.76L24 21.68L12 14.76L23.7 8ZM26 39L37.7 32.24L38 31.74V18.22L26 25.16V39Z" fill="#FF406E"/>
+      </svg>
+      <!-- Заголовок и описание -->
+      <div style="margin-left: 1em;">
+        <h3>Pay for the order and shipping</h3>
+        <p>The final costs will be ready after the order confirmation and<br> shipping estimation from the carrier provider</p>
+      </div>
+    </div>
+    <div style="width: 2px;
+    height: 72px; background-color: #FF406E; margin-left: 25px"></div>
+</div>
+    <div style="display: flex; align-items: center; margin-bottom: 1em;">
+      <!-- Иконка виджета (замените на вашу иконку) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M41.46 14.24L41.18 13.74C40.8188 13.1354 40.3094 12.6329 39.7 12.28L26.28 4.54C25.6724 4.1875 24.9826 4.00124 24.28 4H23.7C22.9974 4.00124 22.3076 4.1875 21.7 4.54L8.28 12.3C7.67394 12.6505 7.17052 13.1539 6.82 13.76L6.54 14.26C6.1875 14.8677 6.00124 15.5575 6 16.26V31.76C6.00124 32.4626 6.1875 33.1524 6.54 33.76L6.82 34.26C7.17958 34.859 7.68098 35.3604 8.28 35.72L21.72 43.46C22.3246 43.8198 23.0164 44.0066 23.72 44H24.28C24.9826 43.9988 25.6724 43.8126 26.28 43.46L39.7 35.7C40.312 35.3574 40.8174 34.852 41.16 34.24L41.46 33.74C41.8082 33.1306 41.9942 32.442 42 31.74V16.24C41.9988 15.5375 41.8126 14.8477 41.46 14.24ZM23.7 8H24.28L36 14.76L24 21.68L12 14.76L23.7 8ZM26 39L37.7 32.24L38 31.74V18.22L26 25.16V39Z" fill="#FF406E"/>
+      </svg>
+      <!-- Заголовок и описание -->
+      <div style="margin-left: 1em;">
+        <h3>Wait for the delivery</h3>
+        <p>The order will be delivered to your door by a delivery man of our cargo-partners</p>
+      </div>
+    </div>
+    <div style="width: 2px;
+    height: 72px; background-color: #FF406E; margin-left: 25px"></div>
+</div>
+
+    <div style="display: flex; align-items: center; margin-bottom: 1em;">
+      <!-- Иконка виджета (замените на вашу иконку) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M41.46 14.24L41.18 13.74C40.8188 13.1354 40.3094 12.6329 39.7 12.28L26.28 4.54C25.6724 4.1875 24.9826 4.00124 24.28 4H23.7C22.9974 4.00124 22.3076 4.1875 21.7 4.54L8.28 12.3C7.67394 12.6505 7.17052 13.1539 6.82 13.76L6.54 14.26C6.1875 14.8677 6.00124 15.5575 6 16.26V31.76C6.00124 32.4626 6.1875 33.1524 6.54 33.76L6.82 34.26C7.17958 34.859 7.68098 35.3604 8.28 35.72L21.72 43.46C22.3246 43.8198 23.0164 44.0066 23.72 44H24.28C24.9826 43.9988 25.6724 43.8126 26.28 43.46L39.7 35.7C40.312 35.3574 40.8174 34.852 41.16 34.24L41.46 33.74C41.8082 33.1306 41.9942 32.442 42 31.74V16.24C41.9988 15.5375 41.8126 14.8477 41.46 14.24ZM23.7 8H24.28L36 14.76L24 21.68L12 14.76L23.7 8ZM26 39L37.7 32.24L38 31.74V18.22L26 25.16V39Z" fill="#FF406E"/>
+      </svg>
+      <!-- Заголовок и описание -->
+      <div style="margin-left: 1em;">
+        <h3>Get your cosmetic!</h3>
+        <p>Get your order and enjoy!</p>
+      </div>
+    </div>
+
+    <div class="container" style="display: flex;
+    max-width: 100%; /* Максимальная ширина контейнера - равная ширине экрана */
+    padding: 2cm;
+    align-items: center;
+    gap: 80px;
+    background-size: cover;
+    background-color: #F6F6F8;
+">
+
+
+    <div class="form-container" style="flex: 1; background-color: #F6F6F8;">
+      <h2 style="color: #FF406E">Contact Us</h2>
+      <form class="form" action="#" method="post">
+            <input type="text" placeholder="Name" name="name" required style="display: flex;
+              height: 48px;
+              padding: 12px;
+              align-items: center;
+              gap: 8px;
+              align-self: stretch;
+              border: 1px solid rgba(0, 0, 0, 0.20);
+              background: var(--White, #FFF);
+              width: 100%; /* Равная ширина полей ввода */
+">
+            <input type="email" placeholder="Email" name="email" required style="display: flex;
+              height: 48px;
+              padding: 12px;
+              align-items: center;
+              gap: 8px;
+              align-self: stretch;
+              border: 1px solid rgba(0, 0, 0, 0.20);
+              background: var(--White, #FFF);
+              width: 100%; /* Равная ширина полей ввода */
+">
+            <textarea placeholder="Message" name="message" rows="5" style="display: flex;
+              height: 180px;
+              padding: 12px;
+              align-items: flex-start;
+              align-self: stretch;
+              border: 1px solid rgba(0, 0, 0, 0.20);
+              background: var(--White, #FFF);
+              width: 100%; /* Равная ширина поля ввода */
+"></textarea>
+<div id="submit" class="submit-button" style="margin-top: 20px;">
+  Submit
+</div>
+        </form>
+    </div>
+
+    <div class="image-container" style="flex: 1;">
+        <img src="media/images/contact_us.jpg" alt="contact_us" style="width: 100%; height: auto;">
+    </div>
+</div>
+
+</main>
+</div>
+{% endblock %}
+

@@ -1,0 +1,360 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+ /* Custom CSS styles */
+ .wrapper {
+  padding:  20px;
+}
+.btn-custom2 {
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+.form-container { flex: 1; 
+  background-color: #F6F6F8
+
+  
+}
+
+/* Изменение цвета фона при наведении на кнопки */
+.btn-custom2:hover {
+  color: #FF406E
+}
+.btn-custom {
+  width: 50%; /* Это заставит кнопки растянуться на всю ширину контейнера */
+  margin-bottom: 10px; /* Добавим немного отступа между кнопками */
+}
+
+.headline {
+  width: 144px;
+  height: 36px;
+  color: #171717;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 10px; /* Добавим немного отступа между заголовками */
+}
+
+.btn-custom2 {
+  width: 144px;
+  height: 36px;
+  color: #171717;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; /* Это обеспечит вертикальное центрирование по высоте страницы */
+  padding: 20px;
+}
+
+.submit-button {
+width: 400px;
+height: 56px;
+padding: 16px;
+text-align: center;
+border: none;
+border-radius: 30px;
+background: var(--Pink-main, #FF406E);
+color: white;
+cursor: pointer;
+
+}
+ .navbar-brand {
+  margin-right: 2rem; /* Add some spacing to the right of the brand */
+}
+.navbar-form {
+  margin-right: 4cm; /* Add a 4cm margin to the right of the search input */
+}
+.form-control {
+  width: 300px; /* Уменьшаем ширину строки поиска на 25% */
+}
+.btn-custom {
+  margin-left: 1rem; /* Add spacing between buttons */
+}
+.btn-request-consultation {
+  margin-left: 1rem; /* Оставляем одинаковое расстояние между кнопками */
+}
+.btn-custom {
+  white-space: nowrap;
+}
+.btn-custom {
+  white-space: nowrap;
+  margin-top: 10px; /* Здесь можно указать необходимое вам значение в пикселях */
+}
+
+/* Добавляем стили для .flex-container */
+.flex-container {
+  display: flex; /* Добавляем флекс-раскладку */
+  width: 85%; /* Ширина 100% контейнера */
+  background: #000;
+  align-items: center; /* Выравнивание по центру вертикально */
+  gap: 16px; /* Отступы между элементами */
+  margin-left: 25mm;; /* Выравнивание по левому краю */
+  
+}
+
+/* Обновленные стили для <ul> (списка) */
+.flex-container ul {
+  display: flex; /* Добавляем флекс-раскладку */
+  margin: 2; /* Убираем внешние отступы */
+  padding: 2; /* Убираем внутренние отступы */
+  list-style: none; /* Убираем маркеры списка */
+  flex-grow: 1; /* Растягиваем список на всю доступную ширину */
+  margin-left: 15mm;
+}
+.flex-container .navbar-nav .nav-link {
+  color: white; /* Цвет текста кнопок */
+  background-color: #000; /* Цвет фона кнопок */
+}
+ /* Custom CSS styles */
+ .navbar-brand {
+  margin-right: 2rem; /* Add some spacing to the right of the brand */
+}
+.navbar-form {
+  margin-right: 4cm; /* Add a 4cm margin to the right of the search input */
+}
+.form-control {
+  width: 300px; /* Уменьшаем ширину строки поиска на 25% */
+}
+.btn-custom {
+  margin-left: 1rem; /* Add spacing between buttons */
+}
+.btn-request-consultation {
+  margin-left: 1rem; /* Оставляем одинаковое расстояние между кнопками */
+}
+.btn-custom {
+  white-space: nowrap;
+}
+.btn-custom {
+  white-space: nowrap;
+  margin-top: 10px; /* Здесь можно указать необходимое вам значение в пикселях */
+}
+
+/* Добавляем стили для футера */
+.footer {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+  margin-top: 1000px;
+}
+
+
+.footer h5 {
+  font-size: 1rem;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer a {
+  color: #6c757d;
+}
+
+.footer hr {
+  border-color: #dcdcdc;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.navbar navbar-expand-md navbar-light bg-white border-bottom {
+
+  margin-top: 1100px;
+}
+
+.btn btn-secondary btn-sm {
+  color: #e70c84;
+  border-radius: 30px;
+  background-color: #ffffff;
+  display: flex;
+  width: 404px;
+height: 56px;
+  
+padding:  24px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+align-self: stretch;
+border-radius: 30px;
+margin-top: 20px;
+margin-left: 20px;
+}
+
+.Subscribe {
+  position: absolute; top: 9cm; right: 2.5cm; background-color: #FF406E;
+   color: white; border: none; padding: 10px 75px; font-size: 30px;
+    border-radius: 10px; border-radius: 20px;
+
+}
+
+
+.seven_fromt_buttons {
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-end; 
+  margin-top: 110px;
+  margin-right: 420px;
+}
+
+.Buy_Now {
+  color: #e70c84;
+  border-radius: 30px;
+  background-color: #ffffff;
+  display: flex;
+  width: 404px;
+height: 56px;
+  
+padding:  24px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+align-self: stretch;
+border-radius: 30px;
+margin-top: 20px;
+margin-left: 20px;
+}
+
+.btn btn-secondary btn-sm {
+  
+display: flex;
+width: 404px;
+height: 56px;
+                                    
+padding:  24px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+align-self: stretch;
+border-radius: 30px;
+border: 1px solid var(--Pink-main, #FF406E);
+background: var(--Pink-main, #FF406E);
+
+margin-left: 50px;
+
+}
+
+
+/* Custom CSS styles */
+.navbar-brand {
+    margin-right: 2rem; /* Add some spacing to the right of the brand */
+}
+
+.navbar-form {
+    margin-right: 4cm; /* Add a 4cm margin to the right of the search input */
+}
+
+.form-control {
+    width: 300px; /* Уменьшаем ширину строки поиска на 25% */
+}
+
+.btn-custom {
+    margin-left: 1rem; /* Add spacing between buttons */
+}
+
+.btn-request-consultation {
+    margin-left: 1rem; /* Оставляем одинаковое расстояние между кнопками */
+}
+
+.btn-custom {
+    white-space: nowrap;
+}
+
+.btn-custom {
+    white-space: nowrap;
+    margin-top: 10px; /* Здесь можно указать необходимое вам значение в пикселях */
+}
+
+/* Добавляем стили для .flex-container */
+.flex-container {
+    display: flex; /* Добавляем флекс-раскладку */
+    width: 85%; /* Ширина 100% контейнера */
+    background: #000;
+    align-items: center; /* Выравнивание по центру вертикально */
+    gap: 16px; /* Отступы между элементами */
+    margin-left: 25mm;; /* Выравнивание по левому краю */
+    
+}
+
+/* Обновленные стили для <ul> (списка) */
+.flex-container ul {
+    display: flex; /* Добавляем флекс-раскладку */
+    margin: 2; /* Убираем внешние отступы */
+    padding: 2; /* Убираем внутренние отступы */
+    list-style: none; /* Убираем маркеры списка */
+    flex-grow: 1; /* Растягиваем список на всю доступную ширину */
+    margin-left: 15mm;
+    
+}
+
+.flex-container .navbar-nav .nav-link {
+    color: white; /* Цвет текста кнопок */
+    background-color: #000; /* Цвет фона кнопок */
+    
+}
+
+.btn btn-custom2 {
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-end; 
+  
+    text-align: left;
+    transition: background-color 0.3s ease; /* Добавляем плавный переход для цвета фона */
+}
+
+
+.form-container {
+
+  display: flex;
+width: 1440px;
+padding: 112px 64px;
+align-items: center;
+gap: 80px;
+background-color: #F6F6F8
+}
+
+.form {
+margin-left: -250px;
+
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

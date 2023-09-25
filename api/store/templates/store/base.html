@@ -1,0 +1,284 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}name{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="{% static 'core/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'basket/css/basket.css' %}">
+    <style>
+        /* Custom CSS styles */
+        .navbar-brand {
+            margin-right: 2rem; /* Add some spacing to the right of the brand */
+        }
+        .navbar-form {
+            margin-right: 4cm; /* Add a 4cm margin to the right of the search input */
+        }
+        .form-control {
+            width: 300px; /* Уменьшаем ширину строки поиска на 25% */
+        }
+        .btn-custom {
+            margin-left: 1rem; /* Add spacing between buttons */
+        }
+        .btn-request-consultation {
+            margin-left: 1rem; /* Оставляем одинаковое расстояние между кнопками */
+        }
+        .btn-custom {
+            white-space: nowrap;
+        }
+        .btn-custom {
+            white-space: nowrap;
+            margin-top: 10px; /* Здесь можно указать необходимое вам значение в пикселях */
+        }
+        
+        /* Добавляем стили для футера */
+        .footer {
+            padding: 2rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .footer h5 {
+            font-size: 1rem;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer a {
+            color: #6c757d;
+        }
+
+        .footer hr {
+            border-color: #dcdcdc;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">COLLEKTIONBEAUTY</a>
+                <form class="d-flex navbar-form" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <div class="d-flex align-items-center ms-auto">
+                    <ul class="navbar-nav mb-2 mb-md-0 ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'store:about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'store:delivery' %}">Delivery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'store:reviews' %}">Reviews</a>
+                        </li>
+                    </ul>
+                     <button type="button" class="btn btn-custom">
+                        <a href="#submit" class="text-white" style="text-decoration: none;">Request a consultation</a>
+                    </button> 
+                    <a type="button" role="button" href="{% url "basket:basket_summary" %}" class="btn btn-outline-secondary btn-request-consultation">
+                        <div class="d-flex align-items-center">
+                            <div class="badge bg-danger rounded-circle me-1" id="basket-qty">
+                                {% with total_qty=basket|length %}
+                                    {{ total_qty }}
+                                {% endwith %}
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            Basket
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <style>
+            /* Custom CSS styles */
+            .navbar-brand {
+                margin-right: 2rem; /* Add some spacing to the right of the brand */
+            }
+            .navbar-form {
+                margin-right: 4cm; /* Add a 4cm margin to the right of the search input */
+            }
+            .form-control {
+                width: 300px; /* Уменьшаем ширину строки поиска на 25% */
+            }
+            .btn-custom {
+                margin-left: 1rem; /* Add spacing between buttons */
+            }
+            .btn-request-consultation {
+                margin-left: 1rem; /* Оставляем одинаковое расстояние между кнопками */
+            }
+            .btn-custom {
+                white-space: nowrap;
+            }
+            .btn-custom {
+                white-space: nowrap;
+                margin-top: 10px; /* Здесь можно указать необходимое вам значение в пикселях */
+            }
+            
+            /* Добавляем стили для .flex-container */
+            .flex-container {
+                display: flex; /* Добавляем флекс-раскладку */
+                width: 85%; /* Ширина 100% контейнера */
+                background: #000;
+                align-items: center; /* Выравнивание по центру вертикально */
+                gap: 16px; /* Отступы между элементами */
+                margin-left: 25mm;; /* Выравнивание по левому краю */
+                
+            }
+        
+            /* Обновленные стили для <ul> (списка) */
+            .flex-container ul {
+                display: flex; /* Добавляем флекс-раскладку */
+                margin: 2; /* Убираем внешние отступы */
+                padding: 2; /* Убираем внутренние отступы */
+                list-style: none; /* Убираем маркеры списка */
+                flex-grow: 1; /* Растягиваем список на всю доступную ширину */
+                margin-left: 15mm;
+            }
+            .flex-container .navbar-nav .nav-link {
+                color: white; /* Цвет текста кнопок */
+                background-color: #000; /* Цвет фона кнопок */
+            }
+            
+            
+        </style>
+        
+    
+        <body>
+            <div class="flex-container">
+                <ul class="navbar-nav mb-2 mb-md-0 width: 41px; height: 18px;">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="/">New</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-md-0 ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="/">Brands</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-md-0 ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="/">Skin type</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-md-0 ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="/">For lips</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-md-0 ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="/">For face</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-md-0 ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="/">For hair</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-md-0 ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="/">Both and body</a>
+                    </li>
+                </ul>
+            </div>
+        </body>
+    </header>
+    
+    <div id="content">{% block content %} 
+        
+        {% endblock %}
+    </div>
+    
+
+  <br>  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+{% comment %} FOOTER {% endcomment %}
+    <footer class="container py-5 footer">
+        <hr>
+        <div class="row pt-4">
+            <div class="col-12 col-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="16" fill="currentColor"
+                    class="bi bi-asterisk" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z" />
+                </svg>
+                <small class="d-block mb-3 text-muted">&copy; 2017-2021</small>
+            </div>
+            <div class="col-6 col-md fs15">
+                <h5>Features</h5>
+                <ul class="list-unstyled">
+                    <li><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md fs15">
+                <h5>Resources</h5>
+                <ul class="list-unstyled">
+                    <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md fs15">
+                <h5>Resources</h5>
+                <ul class="list-unstyled">
+                    <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled">
+                    <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+                    <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
