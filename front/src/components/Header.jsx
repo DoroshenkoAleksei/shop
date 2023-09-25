@@ -56,7 +56,7 @@ export default function Header() {
         </div>
       </nav>
 
-      <div className="flex-container">
+      {/* <div className="flex-container">
         <ul className="navbar-nav mb-2 mb-md-0 width: 41px; height: 18px;">
           <li className="nav-item active">
             <a className="nav-link" aria-current="page" href="/">
@@ -194,8 +194,8 @@ export default function Header() {
               Forise
             </button>
           </div> */}
-        </div>
-      </>
+        {/* </div> */}
+      {/* // </> */}
     </header>
   );
 }
