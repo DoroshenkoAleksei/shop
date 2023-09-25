@@ -1,10 +1,8 @@
 import React from "react";
-import App from ".App.js"
 
 export default function AboutPage () {
     return (
 <div id="content">
-  {"{"}% block content %{"}"}
   <h1
     style={{
       color: "#FF406E" /* headlines 48 semiBold */,
