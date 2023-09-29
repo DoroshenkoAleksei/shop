@@ -6,6 +6,7 @@ import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 import { createBrowserHistory } from "history"
 import AboutPage from "./components/AboutPage";
 import Header from "./components/Header";
+import Delivery from "./components/Delivery";
 
 export const history = createBrowserHistory();
 
@@ -18,8 +19,8 @@ export default function App() {
           <Route path="/">
             <Route index element={<Main />} />
             <Route path="about" element={<AboutPage />} />
-            {/* <Route path=":shortcut" element={<Home />} />
-            <Route path="mentors" element={<Mentors />} /> */}
+            <Route path=":Delivery" element={<Delivery />}  />
+            {/* // <Route path="mentors" element={<Mentors />} /> */} */}
           </Route>
         </Routes>
       </HistoryRouter>
